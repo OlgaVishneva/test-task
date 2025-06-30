@@ -12,9 +12,16 @@
     overflow: hidden;
     display: inline-block;
     text-decoration: none;
+    width: 100%;
+    max-width: 475px;
     cursor: pointer;
 
     @include font.font(10px, 16px);
+
+    @media (min-width: 992px) {
+        width: auto;
+        max-width: none;
+    }
 
     &__info {
         display: flex;
