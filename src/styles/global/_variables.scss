@@ -1,0 +1,33 @@
+/* stylelint-disable at-rule-no-unknown */
+@use '../mixins/mixins.scss';
+
+$grid-breakpoints: (
+  start: 0,
+  xxs: 360px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+
+// ::root
+
+:root {
+  // Main colors
+  --c-main-primary-color: #fff;
+  --c-main-primary-emphasis-color: rgba(0, 0, 0, 0.4);
+  --c-main-accent-color: #e4eaf0;
+  --c-main-accent-primary-color: #d7f7c2;
+  --c-main-accent-secondary-color: #006908;
+
+  // Base colors
+  --c-base-color: #000;
+  --c-base-primary-color: #a2a0a0;
+  --c-base-primary-emphasis-color: #0070F0;
+}
+
+$basic-family: 'Montserrat', 'Arial', sans-serif;
+$transition-function: ease;
+$transition-speed: 300ms;
+
+

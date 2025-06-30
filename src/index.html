@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TD Тех.задание для верстальщика</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js"></script>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <script type="module" src="scripts/main.js"></script>
 </head>
-<body>
-    <h1>Здесь должен находиться конетнт</h1>
+
+<body class="layout">
+    <h1 class="layout__hidden-title">TD Техническое задание для верстальщика</h1>
+    <article class="section">
+        <div class="container">
+            <button class="auto-card" type="button" aria-label="Открыть модальное окно" data-cross-button>
+                <div class="auto-card__info">
+                    <div class="auto-card__picture">
+                        <img src="images/product_image.png"
+                            srcset="images/product_image.png.png, images/product_image@2x.png 2x" width="320"
+                            height="240" alt="Volvo XC40 2024." class="auto-card__img">
+                    </div>
+                    <div class="auto-card__content">
+                        <div class="auto-card__header">
+                            <div class="auto-card__brand">
+                                <span class="auto-card__make" data-copy="Volvo XC40">Volvo&nbsp;XC40</span>
+                                <span class="auto-card__addition">2024</span>
+                            </div>
+                            <div class="auto-card__discount">
+                                <span class="auto-card__discount-value">Скидка 200&nbsp;000&nbsp;₽</span>
+                            </div>
+                        </div>
+                        <ul class="auto-card__details">
+                            <li class="auto-card__detail">
+                                <span class="auto-card__detail-label">Бензин, 180 л.с.</span>
+                                <span class="auto-card__detail-value">2.0 л</span>
+                            </li>
+                            <li class="auto-card__detail">
+                                <span class="auto-card__detail-label">Передний</span>
+                                <span class="auto-card__detail-value">4х2</span>
+                            </li>
+                            <li class="auto-card__detail">
+                                <span class="auto-card__detail-label">6&nbsp;ступений</span>
+                                <span class="auto-card__detail-value">АКПП</span>
+                            </li>
+                            <li class="auto-card__detail">
+                                <span class="auto-card__detail-label">Стоимость</span>
+                                <span class="auto-card__detail-value auto-card__detail-value--primary"
+                                    data-copy="5&nbsp;131&nbsp;000&nbsp;₽">5&nbsp;131&nbsp;000&nbsp;₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </button>
+
+            <div class="modal" id="modal" data-action-modal>
+                <div class="modal__overlay"></div>
+                <div class="modal__panel">
+                    <div class="modal__body">
+                        <div class="modal__desc">
+                            <button type="button" aria-label="Закрыть модальное окно" class="modal__close-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.2 4.79999L4.80005 19.2M4.80005 4.79999L19.2 19.2" stroke="#E1E0E0"
+                                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="modal__content">
+                                <img class="modal__logo-img" src="images/logo.svg" width="130" height="156" alt="Лого.">
+                                <p class="modal__text">Ваша заявка отправлена!</p>
+                                <p class="modal__suggest">Спасибо за обращение! Мы свяжемся с вами в ближайшее время.
+                                </p>
+                                <button class="modal__btn btn btn--primary" type="button">
+                                    <span class="btn__label">Вернуться в каталог</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
 </body>
+
 </html>

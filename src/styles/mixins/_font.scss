@@ -1,0 +1,4 @@
+$basic-family: 'Montserrat', 'Arial', sans-serif;
+@mixin font($fz, $lh, $fw: null, $ff: $basic-family) {
+  font: $fw #{$fz} / #{$lh} $ff;
+}

@@ -1,0 +1,43 @@
+@use 'mixins/hover';
+@use 'mixins/font';
+.btn {
+    $transition-function: ease;
+    $transition-speed: 300ms;
+
+    --btn-icon-size: 15px;
+    user-select: none;
+    border-radius: 12px;
+    display: inline-grid;
+    padding-block: 18px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: column;
+    vertical-align: top;
+    text-decoration: none;
+    border-style: solid;
+    cursor: pointer;
+    outline: none;
+    color: var(--btn-color);
+    background-color: var(--btn-bg-color);
+    border-color: var(--btn-border-color);
+    transition: opacity $transition-speed $transition-function;
+    position: relative;
+    @include font.font(16px, 20px, 600);
+
+    &:focus-visible {
+        border-color: var(--c-base-primary-emphasis-color);
+        outline-offset: 1px;
+        outline: 1px solid var(--c-base-primary-emphasis-color);
+    }
+
+    @include hover.hover {
+        opacity: 0.8;
+    }
+
+    &--primary {
+        // Button colors
+        --btn-color: var(--c-main-primary-color);
+        --btn-bg-color: var(--c-base-primary-emphasis-color);
+        --btn-border-color: var(--c-base-primary-emphasis-color);
+    } 
+}

@@ -1,3 +1,12 @@
-window.addEventListener('DOMContentLoaded', ()=> {
-    console.log('App init');
-})
+import { copy } from "./copy.js";
+import { openModal } from "./openModal.js";
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+        copy();
+        openModal();
+    },
+    true
+);
+
