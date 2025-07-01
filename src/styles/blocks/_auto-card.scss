@@ -1,11 +1,15 @@
 @use 'mixins/font';
+@use 'mixins/hover';
 .auto-card {
     --auto-card-color: var(--c-main-accent-color);
     --auto-card-content-color: var(--c-main-primary-color);
     --auto-card-text-primary-color: var(--c-base-color);
     --auto-card-text-secondary-color: var(--c-base-primary-color);
+    --auto-card-accent-hover-color: var(--c-base-primary-emphasis-color);
     --auto-card-bg-done-color: var(--c-main-accent-primary-color);
     --auto-card-accent-text-done-color: var(--c-main-accent-secondary-color);
+    $transition-function: ease;
+    $transition-speed: 300ms;
 
     border: 1px solid transparent;
     border-radius: 8px;
@@ -89,8 +93,11 @@
     &__make,
     &__detail-value--primary {
         color: var(--auto-card-text-primary-color);
-        cursor: auto;
         @include font.font(12px, 16px, 600);
+        transition: color $transition-function $transition-speed;
+        @include hover.hover {
+            color: var(--auto-card-accent-hover-color);
+        };
 
 
         @media (min-width: 992px) {
